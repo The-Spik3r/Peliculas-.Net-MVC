@@ -1,0 +1,27 @@
+﻿@model List<Peliculas.Models.DB.Pelicula>
+
+@{
+    ViewData["Title"] = "Lista de Películas";
+}
+
+<h2 class="text-3xl font-bold mb-6">@ViewData["Title"]</h2>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    @foreach (var pelicula in Model)
+    {
+            <div class="col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-1">
+                <div class="relative flex flex-col shadow-md rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 max-w-sm border border-gray-200">
+                    <a href="@pelicula.Enlace" class="hover:text-orange-600">
+                        <img src="@pelicula.PosterUrl" alt="@pelicula.Titulo" class="w-full h-auto object-cover object-center" />
+                    </a>
+                    <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">@pelicula.Titulo</div>
+                        <p class="text-gray-700 text-base">@pelicula.Descripcion</p>
+                    </div>
+                    <div class="px-6 py-4 mt-auto">
+                        <a href="@pelicula.Enlace" class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Ver más</a>
+                    </div>
+                </div>
+            </div>
+    }
+</div>

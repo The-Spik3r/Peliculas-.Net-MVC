@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Peliculas</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Peliculas.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+</head>
+<body class="bg-black text-white">
+    <header class="bg-black border-b border-gray-800">
+        <nav class="container mx-auto flex items-center justify-between py-4">
+            <a class="text-lg font-bold text-red-500" asp-area="" asp-controller="Home" asp-action="Index">Peliculas</a>
+            <button class="block sm:hidden border border-gray-600 rounded px-3 py-2 text-gray-400 hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
+                <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <div class="hidden sm:flex">
+                <ul class="flex space-x-4">
+                    <li><a class="hover:text-red-500" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a></li>
+                    <li><a class="hover:text-red-500" asp-area="" asp-controller="Home" asp-action="Privacy">Privacidad</a></li>
+                    <li><a class="hover:text-red-500" asp-area="" asp-controller="Peliculas" asp-action="Pelicula">Pelicula</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container mx-auto">
+        <main class="pb-3">
+            
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-t border-gray-800 text-sm text-gray-400">
+        <div class="container mx-auto py-4">
+            &copy; 2024 - Peliculas - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacidad</a>
+        </div>
+    </footer>
+</body>
+</html>
