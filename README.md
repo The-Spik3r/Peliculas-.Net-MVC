@@ -32,6 +32,14 @@ Antes de clonar el repositorio, **asegúrate** de haber instalado:
   
 ---
 
+![Imagen 1](https://i.postimg.cc/G9YwCfXQ/iamge1.png)
+
+![Imagen 2](https://i.postimg.cc/kRWkvV2Z/image2.png)
+
+
+
+
+---
 ### **:busts_in_silhouette: Créditos**
 
 - [The-Spik3r](https://github.com/The-Spik3r) (Líder del proyecto y desarrollador)
